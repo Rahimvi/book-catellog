@@ -10,92 +10,77 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model AcademicSemester {
-  id         String    @id @default(uuid())
-  year       Int
-  title      String
-  code       String
-  startMonth String
-  endMonth   String
-  createdAt  DateTime  @default(now())
-  updatedAt  DateTime  @updatedAt
-  students   Student[]
+model User {
+  id               String            @id @default(uuid())
+  name             String
+  email            String            @unique
+  password         String
+  role             UserRole
+  contactNo        String
+  address          String
+  profileImg       String
+  orders           Order[]
+  reviewAndRatings ReviewAndRating[]
 
-  @@map("academic_semesters")
+  @@map("user")
 }
 
-model AcademicFaculty {
-  id                  String               @id @default(uuid())
-  title               String
-  createdAt           DateTime             @default(now())
-  updatedAt           DateTime             @updatedAt
-  academicDepartments AcademicDepartment[]
-  students            Student[]
-  faculties           Faculty[]
+model Category {
+  id    String @id @default(uuid())
+  title String
+  books Book[]
 
-  @@map("academic_faculty")
+  @@map("category")
 }
 
-model AcademicDepartment {
+model Book {
+  id               String            @id @default(uuid()) // Using UUID as the ID
+  title            String
+  author           String
+  price            Float
+  genre            String
+  publicationDate  String
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  categoryId       String
+  category         Category          @relation(fields: [categoryId], references: [id])
+  reviewAndRatings ReviewAndRating[]
+
+  @@map("book")
+}
+
+model ReviewAndRating {
   id        String   @id @default(uuid())
-  title     String
+  review    String
+  rating    Int
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  bookId    String
+  book      Book     @relation(fields: [bookId], references: [id])
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  academicFaculty   AcademicFaculty @relation(fields: [academicFacultyId], references: [id])
-  academicFacultyId String
-  students          Student[]
-  faculties         Faculty[]
-
-  @@map("academic_departments")
+  @@map("review_and_rating")
 }
 
-model Student {
+model Order {
   id           String   @id @default(uuid())
-  studentId    String
-  firstName    String
-  lastName     String
-  middleName   String
-  profileImage String
-  email        String
-  contactNo    String
-  gender       String
-  bloodGroup   String
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  userId       String
+  user         User     @relation(fields: [userId], references: [id])
+  orderedBooks Json
+  status       Values   @default(pending) // Values: 'pending', 'shipped', 'delivered'
+  createdAt    DateTime @default(now()) // Order creation timestamp
 
-  academicSemester   AcademicSemester @relation(fields: [academicSemesterId], references: [id])
-  academicSemesterId String
-
-  academicDepartment   AcademicDepartment @relation(fields: [academicDepartmentId], references: [id])
-  academicDepartmentId String
-
-  academicFaculty   AcademicFaculty @relation(fields: [academicFacultyId], references: [id])
-  academicFacultyId String
-
-  @@map("students")
+  @@map("order")
 }
 
-model Faculty {
-  id           String   @id @default(uuid())
-  facultyId    String
-  firstName    String
-  lastName     String
-  middleName   String
-  profileImage String
-  email        String
-  contactNo    String
-  gender       String
-  bloodGroup   String
-  designation  String
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+enum Values {
+  pending
+  shipped
+  delivered
+}
 
-  academicDepartment   AcademicDepartment @relation(fields: [academicDepartmentId], references: [id])
-  academicDepartmentId String
-
-  academicFaculty   AcademicFaculty @relation(fields: [academicFacultyId], references: [id])
-  academicFacultyId String
-
-  @@map("faculties")
+enum UserRole {
+  admin
+  customer
 }

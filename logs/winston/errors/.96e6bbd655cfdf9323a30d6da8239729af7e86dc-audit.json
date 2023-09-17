@@ -1,0 +1,85 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\.96e6bbd655cfdf9323a30d6da8239729af7e86dc-audit.json",
+    "files": [
+        {
+            "date": 1694614447877,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-13-09-20-error.log",
+            "hash": "ce79c9882fb8fd03c5390894f7051021a36c17a77d294b5a23356e3e8e502af4"
+        },
+        {
+            "date": 1694697740126,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-14-09-19-error.log",
+            "hash": "d7c17ac1fc871f17eefe40fa4847ef1e00e570ea0d9bd419ed2ec101d42b091e"
+        },
+        {
+            "date": 1694700070580,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-14-09-20-error.log",
+            "hash": "1ad3b2d37e00e2f4b12a91520889fce2965cb16ef5fe0864b1af5acfe7ec2287"
+        },
+        {
+            "date": 1694778216874,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-15-09-17-error.log",
+            "hash": "4378313889a80bc697539a82f6aec5a6ac704e7f7401ac6aea6effcc8f0ad668"
+        },
+        {
+            "date": 1694789666023,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-15-09-20-error.log",
+            "hash": "eac29fb9368e26c977f028e16e4713bf3523b881026f5dea0d107f10260c3c65"
+        },
+        {
+            "date": 1694790537069,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-15-09-21-error.log",
+            "hash": "77533dfbe766f6381f877b6f15712f60fe4efd887893e8fab13f4272b0d26baa"
+        },
+        {
+            "date": 1694841160557,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-16-09-11-error.log",
+            "hash": "6033cb0423689783dc2dac54fb2936f2877899956cd45e3e07cbd276fb68a49e"
+        },
+        {
+            "date": 1694846035987,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-16-09-12-error.log",
+            "hash": "75c8c187fccb52e6a7457ed4f2726a4855a866e5ad78929e0d574d6953251405"
+        },
+        {
+            "date": 1694857339609,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-16-09-15-error.log",
+            "hash": "47cfabff8a41cfef8e295eef415460532ba4113823f76ba16d6e6762168e3551"
+        },
+        {
+            "date": 1694858479647,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-16-09-16-error.log",
+            "hash": "0c8d3b9478801bd45ec362409fef62ec83dacd518da732c66ace3e04bd02753d"
+        },
+        {
+            "date": 1694872454611,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-16-09-19-error.log",
+            "hash": "90f80bb35198eafb9eeded7592887e78defdbff806b9fc3f2f5285de3f3ab13f"
+        },
+        {
+            "date": 1694873078764,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-16-09-20-error.log",
+            "hash": "5b9c2a1e6513411a9722fe311a6a0f5bb6da741ac655033538bb6f9d38381e9e"
+        },
+        {
+            "date": 1694876514755,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-16-09-21-error.log",
+            "hash": "69c1fe709c90291b73f923b3047d8a0a7a4a2593a8e91b2b430f3f6e98397eb3"
+        },
+        {
+            "date": 1694929362375,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-17-09-11-error.log",
+            "hash": "ef2dd35bda563ec37ec1ca56c6d81e99cb9df16a50d20fd3ba74d9a19099a79d"
+        },
+        {
+            "date": 1694930465213,
+            "name": "A:\\web-development\\assignment-8\\logs\\winston\\errors\\phu-2023-17-09-12-error.log",
+            "hash": "aaf4d21a959de8c51c4fc4cf7e47d17c3695fe95d077ba5d59d03826d64e0129"
+        }
+    ],
+    "hashType": "sha256"
+}
